@@ -11,7 +11,7 @@ def get_page(query):
 # search wikipedia for a list of pages matching the query
 def search_wikipedia(query):
     wiki = wikipediaapi.Wikipedia(user_agent='sane guess (merlin@example.com)', language='en')
-    search_results = wiki.search(query)
+    search_results = wiki.search(query, limit=3)
     return [
         result
         for result in search_results.pages
